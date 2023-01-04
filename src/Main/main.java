@@ -1,6 +1,7 @@
 package Main;
 
 import javax.swing.*;
+import java.util.List;
 
 
 public class main {
@@ -20,11 +21,19 @@ public class main {
     static ButtonTickTackToe button32;
     static ButtonTickTackToe button33;
 
-    static JPopupMenu modeSelect;
+    static List<ButtonTickTackToe> buttonList;
+
+    static ModeSelector modeSelect;
+
+    static AlgorhythmicSolver algoSolver;
 
     public static void main(String[] args) {
+
         startFrame();
-        startGame();
+
+        frame.add(modeSelect =  new ModeSelector(frame, "Game Mode Select"));
+        frame.repaint();
+        modeSelect.show(frame, 450/2-50, 600/2-50);
     }
 
     public static void startFrame() {
@@ -34,10 +43,6 @@ public class main {
         frame.setVisible(true);//making the frame visible
         frame.setResizable(false);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-//
-//        frame.add(modeSelect =  new JPopupMenu("Game Mode Select"));
-//        modeSelect.add("Hi");
-//        frame.repaint();
     }
 
     public static void startGame() {
@@ -53,7 +58,22 @@ public class main {
         frame.add(button32 = new ButtonTickTackToe(frame, "click", 175, 350, 100, 100));
         frame.add(button33 = new ButtonTickTackToe(frame, "click", 300, 350, 100, 100));
 
+        buttonList.clear();
+        buttonList.add(button11);
+        buttonList.add(button12);
+        buttonList.add(button13);
+        buttonList.add(button21);
+        buttonList.add(button22);
+        buttonList.add(button23);
+        buttonList.add(button31);
+        buttonList.add(button32);
+        buttonList.add(button33);
+
         frame.repaint();
+    }
+
+    public static void startAlgo() {
+        algoSolver = new AlgorhythmicSolver(buttonList);
     }
 
     public static int getTurn() {

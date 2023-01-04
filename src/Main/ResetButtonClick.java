@@ -17,6 +17,7 @@ public class ResetButtonClick implements ActionListener {
 
     public void actionPerformed(ActionEvent e) {
         frame.dispose();
-        main.main(new String[] {});
+        main.startFrame();
+        main.startGame();
     }
 }
