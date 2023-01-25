@@ -1,6 +1,7 @@
 package Main;
 
 import javax.swing.*;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -21,13 +22,14 @@ public class main {
     static ButtonTickTackToe button32;
     static ButtonTickTackToe button33;
 
-    static List<ButtonTickTackToe> buttonList;
+    static ArrayList<ButtonTickTackToe> buttonList;
 
     static ModeSelector modeSelect;
 
     static AlgorhythmicSolver algoSolver;
 
     public static void main(String[] args) {
+        buttonList = new ArrayList<ButtonTickTackToe>();
 
         startFrame();
 
@@ -85,24 +87,24 @@ public class main {
     }
 
     public static void endTest() {
-        if(button11.checkWin() == button22.checkWin() && button33.checkWin() == button22.checkWin() && button11.checkWin() != 2) {
-            win(button11.checkWin());
-        } else if (button13.checkWin() == button22.checkWin() && button22.checkWin() == button31.checkWin() && button13.checkWin() != 2) {
-            win(button13.checkWin());
+        if(button11.getTeam() == button22.getTeam() && button33.getTeam() == button22.getTeam() && button11.getTeam() != 2) {
+            win(button11.getTeam());
+        } else if (button13.getTeam() == button22.getTeam() && button22.getTeam() == button31.getTeam() && button13.getTeam() != 2) {
+            win(button13.getTeam());
 
-        } else if (button11.checkWin() == button21.checkWin() && button21.checkWin() == button31.checkWin() && button11.checkWin() != 2) {
-            win(button11.checkWin());
-        } else if (button12.checkWin() == button22.checkWin() && button22.checkWin() == button22.checkWin() && button12.checkWin() != 2) {
-            win(button12.checkWin());
-        } else if (button13.checkWin() == button23.checkWin() && button23.checkWin() == button33.checkWin() && button13.checkWin() != 2) {
-            win(button13.checkWin());
+        } else if (button11.getTeam() == button21.getTeam() && button21.getTeam() == button31.getTeam() && button11.getTeam() != 2) {
+            win(button11.getTeam());
+        } else if (button12.getTeam() == button22.getTeam() && button22.getTeam() == button22.getTeam() && button12.getTeam() != 2) {
+            win(button12.getTeam());
+        } else if (button13.getTeam() == button23.getTeam() && button23.getTeam() == button33.getTeam() && button13.getTeam() != 2) {
+            win(button13.getTeam());
 
-        } else if (button11.checkWin() == button12.checkWin() && button12.checkWin() == button13.checkWin() && button11.checkWin() != 2) {
-            win(button11.checkWin());
-        } else if (button21.checkWin() == button22.checkWin() && button22.checkWin() == button23.checkWin() && button21.checkWin() != 2) {
-            win(button21.checkWin());
-        } else if (button31.checkWin() == button32.checkWin() && button32.checkWin() == button33.checkWin() && button31.checkWin() != 2) {
-            win(button31.checkWin());
+        } else if (button11.getTeam() == button12.getTeam() && button12.getTeam() == button13.getTeam() && button11.getTeam() != 2) {
+            win(button11.getTeam());
+        } else if (button21.getTeam() == button22.getTeam() && button22.getTeam() == button23.getTeam() && button21.getTeam() != 2) {
+            win(button21.getTeam());
+        } else if (button31.getTeam() == button32.getTeam() && button32.getTeam() == button33.getTeam() && button31.getTeam() != 2) {
+            win(button31.getTeam());
         }
 
     }

@@ -15,7 +15,7 @@ public class ButtonTickTackToe extends JButton {
         repaint();
     }
 
-    public int checkWin() {
+    public int getTeam() {
         return listener.icon;
     }
 
