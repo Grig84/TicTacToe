@@ -5,7 +5,8 @@ import java.util.ArrayList;
 
 public class AlgorhythmicSolver {
     ArrayList<ButtonTickTackToe> buttonList;
-    JButton desiredButton;
+    ButtonTickTackToe desiredButton;
+    ButtonTickTackToe button;
 
     public AlgorhythmicSolver(ArrayList<ButtonTickTackToe> buttonList) {
         this.buttonList = buttonList;
@@ -21,16 +22,6 @@ public class AlgorhythmicSolver {
 
 
             desiredButton.doClick();
-        }
-    }
-
-    public enum stateMachineMayhem {
-        empty {
-            @Override
-            public stateMachineMayhem nextState() {
-                
-                return 
-            }
         }
     }
 
