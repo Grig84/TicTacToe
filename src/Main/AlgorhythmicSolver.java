@@ -1,10 +1,7 @@
 package Main;
 
 import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.util.ArrayList;
-import java.util.List;
 
 public class AlgorhythmicSolver {
     ArrayList<ButtonTickTackToe> buttonList;
@@ -17,7 +14,23 @@ public class AlgorhythmicSolver {
 
     public void doTurn() {
         if (main.getTurn() % 2 == 0) {
+            // If it is our turn
+            // TODO: Add state machine
+
+
+
+
             desiredButton.doClick();
+        }
+    }
+
+    public enum stateMachineMayhem {
+        empty {
+            @Override
+            public stateMachineMayhem nextState() {
+                
+                return 
+            }
         }
     }
 

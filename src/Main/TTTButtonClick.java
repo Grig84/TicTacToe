@@ -14,7 +14,6 @@ public class TTTButtonClick implements ActionListener {
 
 
     public TTTButtonClick(JFrame frame, JButton button) {
-        this.turn = turn;
         this.frame = frame;
         this.button = button;
 

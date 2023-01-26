@@ -2,8 +2,6 @@ package Main;
 
 import javax.swing.*;
 import java.util.ArrayList;
-import java.util.List;
-
 
 public class main {
     static JFrame frame;
@@ -24,12 +22,15 @@ public class main {
 
     static ArrayList<ButtonTickTackToe> buttonList;
 
+    static int mode;
+
     static ModeSelector modeSelect;
 
     static AlgorhythmicSolver algoSolver;
 
     public static void main(String[] args) {
         buttonList = new ArrayList<ButtonTickTackToe>();
+        mode = Constants.playerMode;
 
         startFrame();
 
@@ -76,6 +77,7 @@ public class main {
 
     public static void startAlgo() {
         algoSolver = new AlgorhythmicSolver(buttonList);
+        mode = Constants.algoMode;
     }
 
     public static int getTurn() {
@@ -84,6 +86,9 @@ public class main {
 
     public static void nextTurn() {
         turn++;
+        if (mode == Constants.algoMode) {
+            algoSolver.doTurn();
+        }
     }
 
     public static void endTest() {
